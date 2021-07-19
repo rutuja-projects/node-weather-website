@@ -9,8 +9,8 @@ const forcast = (latitude, longitude, callback)=> {
         } else if(response.body.error){
             callback('unable to find the correct location!!', undefined)
         } else{
-            callback(undefined,  'It is ' + response.body.current.weather_descriptions[0] + ' .It is currently '+ response.body.current.temperature + ' degree out and it feels like ' + response.body.current.feelslike + ' degree out!! '
-            )
+            callback(undefined,  'It is ' + response.body.current.weather_descriptions[0] + ' .It is currently '+ response.body.current.temperature + ' degree out and it feels like ' + response.body.current.feelslike + ' degree out!! The humidity is ' +response.body.current.humidity+ '.')
+
         }
     })
 }
